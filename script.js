@@ -98,11 +98,16 @@ let durationTime;
 
 changeSong(0);
 
-// audioElement.addEventListener('ended', () => {
-//     value=value+1; 
-  
-//     changeSong(value);
-//   });
+audioElement.addEventListener('ended', () => {
+    if (repeat) {
+        changeSong(value); 
+        playpauseSong();
+      } else {
+        value = value + 1;
+        changeSong(value); 
+        playpauseSong();
+      }
+  });
 
 
 function getTime(seconds) {
@@ -158,6 +163,11 @@ setInterval(() => {
         currentTimeElement.textContent = getTime(currentTime);
     }
 }, 1000); 
+
+
+
+
+
 }
 
 function playpauseSong(){
@@ -166,10 +176,12 @@ function playpauseSong(){
     ) {
         pauseplayCont.innerHTML = ' <i class="fa-solid fa-play play"></i>';
         audioElement.pause();
+        img.style.animationPlayState = 'paused';
         
       } else {
         pauseplayCont.innerHTML = ' <i class="fa-solid fa-pause play"></i>';
         audioElement.play();
+        img.style.animationPlayState = 'running';
       }
 
 }
@@ -196,7 +208,7 @@ previousButton.addEventListener("click", () => {
     playPauseBolleanValue
 =true;
     playpauseSong();
-//   }
+
 });
 
 pauseplayCont.addEventListener("click", () => {
@@ -207,20 +219,17 @@ pauseplayCont.addEventListener("click", () => {
   playpauseSong();
 });
 
-// repeatButton.addEventListener("click", () => {
-//   repeat = !repeat;
-//   if (repeat) {
-//     repeatButton.classList.add("active");
-//     audioElement.addEventListener('ended',()=>{
-//         audioElement.play();
-//     })
-//   } else {
-//     repeatButton.classList.remove("active");
-//     value=value+1;
-//     changeSong(value);
-//   }
+repeatButton.addEventListener("click", () => {
+  repeat = !repeat;
+  if (repeat) {
+    repeatButton.classList.add("active");
+  
+  } else {
+    repeatButton.classList.remove("active");
+  
+  }
 
-// });
+});
 
 
 

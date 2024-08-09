@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // color: white;
+
 }
 
 body {
@@ -26,11 +26,7 @@ img {
   color: black;
 }
 .mainwrapper {
-  // background-color: burlywood;
-
-  // width: 50%;
   margin: 0 auto;
-  // height: 90vh;
   margin-top: 30px;
   padding: 2rem;
 
@@ -40,12 +36,11 @@ img {
     border: 1px solid rgb(158, 154, 154);
     border-radius: 10px;
     margin: 0 auto;
-    //  height: 100%;
     padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 
     &__top {
       background-color: white;
@@ -56,23 +51,22 @@ img {
       display: flex;
       justify-content: center;
       align-items: center;
-      // overflow: hidden;
-
-      // margin: auto;
       &--img {
         border-radius: 50%;
         object-fit: cover;
+        animation: rotate 5s linear infinite;
+        animation-play-state: paused; 
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    
       }
     }
 
     .bottom {
       width: 100%;
-      // background-color: white;
       display: flex;
       flex-direction: column;
       gap: 2rem;
       &__details {
-        // background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -88,7 +82,6 @@ img {
       }
 
       &__musicplayer {
-        // background-color: yellow;
         display: flex;
         flex-direction: column;
         gap: 0.3rem;
@@ -102,7 +95,6 @@ img {
           width: 100%;
 
           &--progress {
-            // width: 60%;
             width: 0%;
             height: 100%;
             background-color: red;
@@ -110,7 +102,6 @@ img {
         }
         &__timings {
           padding: 0px 2px;
-          // background-color: pink;
           width: 100%;
           display: flex;
           justify-content: space-between;
@@ -118,13 +109,11 @@ img {
       }
 
       .buttonscontainer {
-        // background-color: palevioletred;
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 1.4rem;
         color: rgb(203, 200, 200);
-        // margin-bottom: 4rem;
 
         &__nextprevious {
           display: flex;
@@ -141,7 +130,6 @@ img {
             width: 60px;
             height: 60px;
             color: white;
-            // padding: 1rem 1.2rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -149,6 +137,7 @@ img {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            box-shadow: 0px 3px 5px rgba(254, 65, 65, 0.5);
           };
           &--previous:hover{
             cursor: pointer;
@@ -166,7 +155,7 @@ img {
         }
         &--repeat:hover{
               cursor: pointer;
-              color: black;
+             
         }
         &--shuffle:hover{
             cursor: pointer;
@@ -175,4 +164,14 @@ img {
       }
     }
   }
+}
+
+
+
+   
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
