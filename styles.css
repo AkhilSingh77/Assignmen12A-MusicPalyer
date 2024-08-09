@@ -8,7 +8,11 @@ body {
   background-color: rgb(241, 237, 237);
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
   padding: 0;
 }
@@ -16,6 +20,10 @@ h1, h2, h3, h4, p {
 img {
   max-width: 100%;
   direction: block;
+}
+
+.active {
+  color: black;
 }
 
 .mainwrapper {
@@ -80,9 +88,10 @@ img {
   height: 9px;
   border-radius: 10px;
   overflow: hidden;
+  width: 100%;
 }
 .mainwrapper .musicwrapper .bottom__musicplayer__main--progress {
-  width: 60%;
+  width: 0%;
   height: 100%;
   background-color: red;
 }
@@ -122,4 +131,23 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.mainwrapper .musicwrapper .bottom .buttonscontainer__nextprevious--previous:hover {
+  cursor: pointer;
+  color: black;
+}
+.mainwrapper .musicwrapper .bottom .buttonscontainer__nextprevious--forward:hover {
+  cursor: pointer;
+  color: black;
+}
+.mainwrapper .musicwrapper .bottom .buttonscontainer__nextprevious:hover {
+  cursor: pointer;
+}
+.mainwrapper .musicwrapper .bottom .buttonscontainer--repeat:hover {
+  cursor: pointer;
+  color: black;
+}
+.mainwrapper .musicwrapper .bottom .buttonscontainer--shuffle:hover {
+  cursor: pointer;
+  color: black;
 }/*# sourceMappingURL=styles.css.map */

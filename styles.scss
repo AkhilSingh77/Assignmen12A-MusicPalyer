@@ -1,164 +1,178 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    // color: white;
-
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // color: white;
 }
 
-body{
-    background-color: rgb(241, 237, 237);
+body {
+  background-color: rgb(241, 237, 237);
 }
 
-h1,h2,h3,h4,p{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-img{
-    max-width: 100%;
-    direction: block;
+img {
+  max-width: 100%;
+  direction: block;
 }
+.active {
+  color: black;
+}
+.mainwrapper {
+  // background-color: burlywood;
 
-.mainwrapper{
-    // background-color: burlywood;
-    
-    // width: 50%;
+  // width: 50%;
+  margin: 0 auto;
+  // height: 90vh;
+  margin-top: 30px;
+  padding: 2rem;
+
+  .musicwrapper {
+    width: 320px;
+    background-color: white;
+    border: 1px solid rgb(158, 154, 154);
+    border-radius: 10px;
     margin: 0 auto;
-    // height: 90vh;
-    margin-top: 30px;
-    padding: 2rem;
-
-    .musicwrapper{
-     width: 320px;
-     background-color: white;
-     border: 1px solid rgb(158, 154, 154);
-     border-radius: 10px;
-     margin: 0 auto;
     //  height: 100%;
-     padding: 2rem 2rem;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-      gap: 3rem;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
 
-     &__top{
-        background-color: white;
-        width: 90%;
+    &__top {
+      background-color: white;
+      width: 90%;
+      border-radius: 50%;
+      border: 1px solid rgb(202, 200, 200);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // overflow: hidden;
+
+      // margin: auto;
+      &--img {
         border-radius: 50%;
-        border:  1px solid rgb(202, 200, 200);
-        padding: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // overflow: hidden;
-     
-        // margin: auto;
-        &--img{
-            border-radius: 50%;
-            object-fit: cover;
-        }
+        object-fit: cover;
+      }
+    }
 
-     }
-
-     .bottom{
-        width: 100%;
+    .bottom {
+      width: 100%;
+      // background-color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      &__details {
         // background-color: white;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        &__details{
-            // background-color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap:0.3rem;
-            
-            &--title{
+        align-items: center;
+        gap: 0.3rem;
+
+        &--title {
           font-size: 2rem;
-            }       
-            &--artist{
-                font-size: 1rem;
-                color: rgb(185, 184, 184);
-            }
-         }
-
-         &__musicplayer{
-            // background-color: yellow;
-            display: flex;
-            flex-direction: column;
-            gap:0.3rem;
-
-   
-             &__main{
-                background-color: white;
-                border: 1px solid rgb(218, 215, 215);
-                height: 9px;
-                border-radius: 10px;
-                overflow: hidden;
-
-                &--progress{
-                    width: 60%;
-                    height: 100%;
-                    background-color: red;
-                }
-             
-             }
-             &__timings{
-                padding: 0px 2px;
-                // background-color: pink;
-                width: 100%;
-                display: flex;
-                justify-content:space-between;
-            }
-            
-          
-
-
-        
-         }
-
-         .buttonscontainer{
-            // background-color: palevioletred;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.4rem;
-            color: rgb(203, 200, 200);
-            // margin-bottom: 4rem;
-
-            &__nextprevious{
-                display: flex;
-                align-items: center;
-                border: 1px solid rgb(208, 207, 207);
-                width: 58%;
-               justify-content: space-between;
-               position: relative;
-               padding: 3px 0.6rem;
-               border-radius: 1rem;
-                .pauseplay{
-                    position: absolute;
-                    background-color: red;
-                    width: 60px;
-                    height: 60px;
-                    color: white;
-                    // padding: 1rem 1.2rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 50%;
-                    top: 50%;
-                    left: 50%;
-                      transform: translate(-50%, -50%);
-                }
-            }
         }
+        &--artist {
+          font-size: 1rem;
+          color: rgb(185, 184, 184);
+        }
+      }
 
-     }
+      &__musicplayer {
+        // background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
 
+        &__main {
+          background-color: white;
+          border: 1px solid rgb(218, 215, 215);
+          height: 9px;
+          border-radius: 10px;
+          overflow: hidden;
+          width: 100%;
+
+          &--progress {
+            // width: 60%;
+            width: 0%;
+            height: 100%;
+            background-color: red;
+          }
+        }
+        &__timings {
+          padding: 0px 2px;
+          // background-color: pink;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .buttonscontainer {
+        // background-color: palevioletred;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.4rem;
+        color: rgb(203, 200, 200);
+        // margin-bottom: 4rem;
+
+        &__nextprevious {
+          display: flex;
+          align-items: center;
+          border: 1px solid rgb(208, 207, 207);
+          width: 58%;
+          justify-content: space-between;
+          position: relative;
+          padding: 3px 0.6rem;
+          border-radius: 1rem;
+          .pauseplay {
+            position: absolute;
+            background-color: red;
+            width: 60px;
+            height: 60px;
+            color: white;
+            // padding: 1rem 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          };
+          &--previous:hover{
+            cursor: pointer;
+            color: black;
+          }
+          &--forward:hover{
+            cursor: pointer;
+            color: black;
+          }
+         
+        }
+        &__nextprevious:hover{
+            cursor: pointer;
+            
+        }
+        &--repeat:hover{
+              cursor: pointer;
+              color: black;
+        }
+        &--shuffle:hover{
+            cursor: pointer;
+            color: black;
+        }
+      }
     }
+  }
 }
-
-
-
